@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CCSwitch 速配站 — Claude Code / Codex 一键安装教程，ccswitch / codex++ 配置国产 API 指南" />
+  <meta property="og:title" content="CCSwitch 速配站" />
+  <meta property="og:description" content="Claude Code / Codex 一键安装教程，ccswitch / codex++ 配置国产 API" />
+  <meta property="og:type" content="website" />
+  <title>CCSwitch 速配站</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="compliance-banner" id="banner">
+  <div class="container">
+    <span class="banner-icon">⚠️</span>
+    <span class="banner-text">
+      <strong>重要提示：</strong>本站仅提供软件安装、本地环境配置、故障排查等纯技术指导。
+      境外网络访问、官方账号注册、API 密钥、官方服务费用均需用户自行依法办理，
+      本站不提供、不分享任何代理、翻墙工具及相关资源。
+    </span>
+    <button class="banner-close" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">
+      <span class="logo-icon">⚡</span>
+      CCSwitch 速配站
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="main-nav">
+      <a href="#features">功能</a>
+      <a href="#download">下载</a>
+      <a href="#tutorials">教程</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>一键安装 <span class="gradient-text">Claude Code</span> <br class="hide-mobile"/>与 <span class="gradient-text">Codex</span></h1>
+    <p class="hero-sub"><strong>ccswitch</strong> + <strong>codex++</strong> 双工具，轻松配置国内 API</p>
+    <p class="hero-desc">
+      告别复杂配置和环境报错。从下载安装到绑定国产大模型（DeepSeek / 通义千问 / 智谱 GLM），
+      全程图文教程，小白也能自助搞定 AI 编程助手。
+    </p>
+    <div class="hero-btns">
+      <a href="#download" class="btn btn-primary">📦 立即下载</a>
+      <a href="#tutorials" class="btn btn-outline">📖 查看教程</a>
+    </div>
+  </div>
+</section>
+
+<section class="section features-section" id="features">
+  <div class="container">
+    <h2 class="section-title">🚀 核心功能</h2>
+    <p class="section-subtitle">两大 AI 编程工具 + 国内 API 一键切换，让开发更高效</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>Claude Code 安装</h3>
+        <p>Windows / macOS / Linux 全平台保姆级安装教程，从 Node.js 环境搭建到全局命令验证，小白也能轻松上手。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧩</div>
+        <h3>Codex & Copilot 部署</h3>
+        <p>OpenAI Codex 本地环境部署、Python 虚拟环境配置、GitHub Copilot 插件安装与授权，一步到位。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h3>ccswitch 国内 API 切换</h3>
+        <p>使用 <code>cc switch</code> 一键将 Claude Code 后端切换到 DeepSeek、通义千问、智谱 GLM 等国产大模型，无需手动配置环境变量。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>ccswitch 通用切换</h3>
+        <p>Claude Code 和 Codex 都能用。一条 <code>cc switch</code> 命令切换 DeepSeek、通义千问、智谱 GLM 等国产模型，无需改任何配置。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section download-section" id="download">
+  <div class="container">
+    <h2 class="section-title">📥 下载</h2>
+    <p class="section-subtitle">选择你的操作系统，开始一键安装</p>
+    <div class="download-grid">
+      <div class="download-card">
+        <div class="download-icon">🪟</div>
+        <h3>Windows</h3>
+        <p>支持 Windows 10 / 11<br/>含 PowerShell 一键安装脚本</p>
+        <div class="download-btns">
+          <a href="pages/claude-code.html#section-1-1" class="btn btn-primary btn-sm">Claude Code</a>
+          <a href="pages/codex.html#section-1-1" class="btn btn-outline btn-sm">Codex</a>
+        </div>
+      </div>
+      <div class="download-card">
+        <div class="download-icon">🍎</div>
+        <h3>macOS</h3>
+        <p>支持 Intel & Apple Silicon<br/>含 Homebrew 安装指引</p>
+        <div class="download-btns">
+          <a href="pages/claude-code.html#section-1-3" class="btn btn-primary btn-sm">Claude Code</a>
+          <a href="pages/codex.html#section-1-1" class="btn btn-outline btn-sm">Codex</a>
+        </div>
+      </div>
+      <div class="download-card">
+        <div class="download-icon">🐧</div>
+        <h3>Linux</h3>
+        <p>支持 Ubuntu / CentOS<br/>终端命令行快速部署</p>
+        <div class="download-btns">
+          <a href="pages/claude-code.html#section-1-4" class="btn btn-primary btn-sm">Claude Code</a>
+          <a href="pages/codex.html#section-1-1" class="btn btn-outline btn-sm">Codex</a>
+        </div>
+      </div>
+      <div class="download-card">
+        <div class="download-icon">☁️</div>
+        <h3>ccswitch 配置国产 API</h3>
+        <p>Claude Code & Codex 通用<br/>一键切换国产大模型</p>
+        <div class="download-btns">
+          <a href="pages/claude-code.html#section-4" class="btn btn-primary btn-sm">Claude Code 版</a>
+          <a href="pages/codex.html#section-2" class="btn btn-outline btn-sm">Codex 版</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tutorials-section" id="tutorials">
+  <div class="container">
+    <h2 class="section-title">📚 教程快速入口</h2>
+    <p class="section-subtitle">保姆级图文教程，从零到上手全覆盖</p>
+    <div class="tutorials-grid">
+      <a href="pages/claude-code.html" class="tutorial-card">
+        <div class="tutorial-icon">🛠️</div>
+        <h3>Claude Code 完整教程</h3>
+        <ul>
+          <li>Windows / Mac / Linux 分系统安装</li>
+          <li>VS Code 插件配置</li>
+          <li><strong>ccswitch 配置国产模型</strong></li>
+          <li>常用指令 & 进阶技巧</li>
+        </ul>
+        <span class="tutorial-link">→ 查看教程</span>
+      </a>
+      <a href="pages/codex.html" class="tutorial-card">
+        <div class="tutorial-icon">🧩</div>
+        <h3>Codex & Copilot 教程</h3>
+        <ul>
+          <li>OpenAI Codex 本地部署</li>
+          <li>Python 虚拟环境 + 依赖安装</li>
+          <li><strong>ccswitch 配置国产 API</strong></li>
+          <li>GitHub Copilot 插件安装</li>
+        </ul>
+        <span class="tutorial-link">→ 查看教程</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <h2 class="section-title">❓ 常见问题</h2>
+    <p class="section-subtitle">安装和配置中遇到问题？先来这里找答案</p>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ccswitch 是什么？和 codex++ 有什么区别？
+          <span class="faq-toggle">▼</span>
+        </button>
+        <div class="faq-answer">
+          <strong>ccswitch</strong> 是为 Claude Code 设计的一键切换工具，运行 <code>cc switch deepseek</code> 等命令即可将 Claude Code 的后端模型切换到国产大模型。<br/>
+          <strong>codex++</strong> 是为 Codex / OpenAI 兼容工具链设计的国产 API 路由工具，自动拦截 HTTP 请求并重定向到国内 API 端点，无需修改代码。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          使用国产模型后，功能会受限吗？
+          <span class="faq-toggle">▼</span>
+        </button>
+        <div class="faq-answer">
+          国产模型对 Claude Code 的 tool-use 格式兼容程度不同。代码问答、代码审查等基础场景完全可用；文件编辑、终端命令执行等高级功能可能部分受限。建议国产模型用于日常编码辅助场景。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          国内 API Key 去哪里申请？
+          <span class="faq-toggle">▼</span>
+        </button>
+        <div class="faq-answer">
+          <ul>
+            <li><strong>DeepSeek：</strong>platform.deepseek.com 注册获取</li>
+            <li><strong>通义千问：</strong>dashscope.aliyun.com 注册获取</li>
+            <li><strong>智谱 GLM：</strong>open.bigmodel.cn 注册获取</li>
+            <li><strong>百度千帆：</strong>cloud.baidu.com 注册获取</li>
+          </ul>
+          各平台通常提供免费额度，具体以官方政策为准。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          安装时提示"不是内部或外部命令"怎么办？
+          <span class="faq-toggle">▼</span>
+        </button>
+        <div class="faq-answer">
+          这通常是因为 Node.js 或 Python 未正确配置环境变量。请确认已安装对应运行时，并将安装路径添加到系统 PATH 中。详细步骤请查看对应教程页的环境准备部分。
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          数据安全吗？API Key 会被上传吗？
+          <span class="faq-toggle">▼</span>
+        </button>
+        <div class="faq-answer">
+          ccswitch 和 codex++ 均为本地工具，API Key 仅存储在本地环境变量中，不会上传到任何云端服务器。所有 AI 请求直接发往你所配置的 API 服务商，不经过第三方中转。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>🚀 立即开始你的 AI 编程之旅</h2>
+    <p>从下载到配置国产 API，全程跟着教程一步步来，一个按钮搞定。</p>
+    <a href="#download" class="btn btn-primary" style="color:var(--color-primary);background:var(--color-white);">📦 开始下载</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="pages/disclaimer.html">免责声明</a>
+      <a href="pages/disclaimer.html">联系我们</a>
+    </div>
+    <div class="footer-copyright">
+      本站所有内容仅作技术交流，严格遵守网络安全及版权相关法律法规。<br/>
+      &copy; 2025 CCSwitch 速配站 — Claude Code & Codex 安装配置教程
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

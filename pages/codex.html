@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Codex 下载教程 + ccswitch 配置国产 API 指南" />
+  <title>Codex 教程 — CCSwitch 速配站</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div class="compliance-banner" id="banner">
+  <div class="container">
+    <span class="banner-icon">⚠️</span>
+    <span class="banner-text">
+      <strong>重要提示：</strong>本站仅提供软件安装、本地环境配置、故障排查等纯技术指导。
+      境外网络访问、官方账号注册、API 密钥、官方服务费用均需用户自行依法办理。
+    </span>
+    <button class="banner-close" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      CCSwitch 速配站
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="main-nav">
+      <a href="../index.html#features">功能</a>
+      <a href="../index.html#download">下载</a>
+      <a href="../index.html#tutorials">教程</a>
+      <a href="../index.html#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <h1>🧩 Codex 下载 & ccswitch 配置教程</h1>
+    <p>下载安装 + 用 ccswitch 一键切换国产 API</p>
+  </div>
+</section>
+
+<section>
+  <div class="container content-with-sidebar">
+    <aside class="sidebar">
+      <h3>📑 目录</h3>
+      <ul>
+        <li><a href="#section-1">一、Codex 下载安装</a></li>
+        <li><a href="#section-2">二、ccswitch 配置国产 API ⭐</a></li>
+        <li><a href="#section-3">三、各平台 API Key 申请</a></li>
+      </ul>
+    </aside>
+
+    <article class="main-content">
+
+      <div class="compliance-notice">
+        <strong>📋 本教程须知</strong>
+        本教程仅针对软件安装、环境调试、功能配置。Codex 版权归 OpenAI 所有，本站仅做技术分享。国产 API Key 请自行在各平台注册获取。
+      </div>
+
+      <h2 id="section-1">一、Codex 下载安装</h2>
+
+      <p>Codex 是 OpenAI 推出的代码生成模型，你可以通过以下方式获取：</p>
+
+      <div class="notice-box">
+        <strong>🔍 怎么获取？</strong> 直接在搜索引擎搜索 <strong>"OpenAI Codex download"</strong> 或访问 OpenAI 官网，按照页面指引下载对应系统的版本即可。安装过程跟着向导走，一路下一步就行。
+      </div>
+
+      <p><strong>安装前确保已安装：</strong></p>
+      <ul>
+        <li><strong>Python</strong> 3.8+ — 前往 <a href="https://python.org" target="_blank">python.org</a> 下载，安装时勾选 "Add Python to PATH"</li>
+        <li><strong>Git</strong>（可选）</li>
+      </ul>
+
+      <pre># 验证 Python
+python --version
+
+# 验证 pip
+pip --version</pre>
+
+      <hr style="margin: 32px 0; border-color: hsl(var(--border));" />
+
+      <h2 id="section-2">二、ccswitch 配置国产 API ⭐</h2>
+
+      <p><strong>ccswitch</strong> 是一个命令行工具，可以一键将 Claude Code / Codex 等工具的后端模型切换到国产大模型，无需手动配置环境变量。</p>
+
+      <h3>安装 ccswitch</h3>
+      <p><a href="https://github.com/TomokiMatsubuchi/ccswitch" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="display:inline-flex;">📦 前往 GitHub 下载 ccswitch</a></p>
+      <p style="margin-top:8px;">或通过 npm 安装：</p>
+      <pre># 通过 npm 全局安装
+npm install -g ccswitch
+
+# 验证安装
+cc --version</pre>
+
+      <h3>📸 图文步骤：用 ccswitch 配置 DeepSeek API</h3>
+
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div>
+          <p>打开下载好的 cc switch</p>
+          <img src="../images/1.png" alt="打开 cc switch" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div>
+          <p>选择上面的 Claude Code 终端版</p>
+          <img src="../images/2.png" alt="选择 Claude Code 终端版" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <div>
+          <p>新建一个</p>
+          <img src="../images/3.png" alt="新建配置" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">4</span>
+        <div>
+          <p>选择 DeepSeek</p>
+          <img src="../images/4.png" alt="选择 DeepSeek 模型" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">5</span>
+        <div>
+          <p>去 DeepSeek 官网生成 API</p>
+          <img src="../images/5.png" alt="前往 DeepSeek 官网" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">6</span>
+        <div>
+          <p>打开 DeepSeek 官网</p>
+          <img src="../images/6.png" alt="DeepSeek 官网" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">7</span>
+        <div>
+          <p>选择 API 开放平台</p>
+          <img src="../images/7.png" alt="API 开放平台" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">8</span>
+        <div>
+          <p>随机充几块钱（没钱再充，也不贵）</p>
+          <img src="../images/8.png" alt="充值" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">9</span>
+        <div>
+          <p>点击 API Keys</p>
+          <img src="../images/9.png" alt="API Keys 页面" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">10</span>
+        <div>
+          <p>创建一个 API</p>
+          <img src="../images/10.png" alt="创建 API" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">11</span>
+        <div>
+          <p>复制到 API 填空中，然后划到下面获取模型</p>
+          <img src="../images/11.png" alt="粘贴 API Key 并获取模型" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">12</span>
+        <div>
+          <p>会显示获取两个模型，选上 1M</p>
+          <img src="../images/12.png" alt="选择模型 1M" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">13</span>
+        <div>
+          <p>保存退出（留在后台）</p>
+          <img src="../images/13.png" alt="保存退出" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">14</span>
+        <div>
+          <p>使用，测试能否使用</p>
+          <img src="../images/14.png" alt="测试使用" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">15</span>
+        <div>
+          <p>DeepSeek 正常运行，代表可以使用</p>
+          <img src="../images/15.png" alt="DeepSeek 运行成功" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">16</span>
+        <div>
+          <p>打开终端输入 <code>claude</code></p>
+          <img src="../images/16.png" alt="终端输入 claude" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">17</span>
+        <div>
+          <p>完成！Enjoy AI 编程 🎉</p>
+          <img src="../images/17.png" alt="完成配置" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="notice-box">
+        <strong>💡 提示：</strong>配置完成后，启动 Claude Code / Codex 等工具时会自动使用国产模型作为后端，无需修改任何代码或配置文件。
+      </div>
+
+      <div class="notice-box warning">
+        <strong>注意：</strong>国产模型对 tool-use 格式的兼容程度不同。代码问答、代码审查等基础场景完全可用，部分高级功能可能不完全支持。
+      </div>
+
+      <hr style="margin: 32px 0; border-color: hsl(var(--border));" />
+
+      <h2 id="section-3">三、各平台 API Key 申请</h2>
+
+      <p>使用 ccswitch 切换国产模型前，需要先在各平台注册获取 API Key：</p>
+
+      <div class="api-key-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:20px 0;">
+        <div class="feature-card" style="padding:20px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🔮</div>
+          <h4 style="font-size:1rem;font-weight:700;margin-bottom:6px;">DeepSeek</h4>
+          <p style="font-size:0.85rem;color:var(--color-muted-foreground);">platform.deepseek.com</p>
+        </div>
+        <div class="feature-card" style="padding:20px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🌐</div>
+          <h4 style="font-size:1rem;font-weight:700;margin-bottom:6px;">通义千问</h4>
+          <p style="font-size:0.85rem;color:var(--color-muted-foreground);">dashscope.aliyun.com</p>
+        </div>
+        <div class="feature-card" style="padding:20px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">🧠</div>
+          <h4 style="font-size:1rem;font-weight:700;margin-bottom:6px;">智谱 GLM</h4>
+          <p style="font-size:0.85rem;color:var(--color-muted-foreground);">open.bigmodel.cn</p>
+        </div>
+        <div class="feature-card" style="padding:20px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📡</div>
+          <h4 style="font-size:1rem;font-weight:700;margin-bottom:6px;">百度千帆</h4>
+          <p style="font-size:0.85rem;color:var(--color-muted-foreground);">cloud.baidu.com</p>
+        </div>
+      </div>
+
+      <p style="margin-top:40px;text-align:center;color:var(--color-muted-foreground);font-size:0.85rem;">
+        遇到问题？查看 <a href="../index.html#faq">FAQ</a>
+      </p>
+
+    </article>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/disclaimer.html">联系我们</a>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 CCSwitch 速配站
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

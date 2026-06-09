@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Claude Code 完整安装教程 — 全平台安装指南 + ccswitch 配置国产 API 详解" />
+  <title>Claude Code 安装教程 — CCSwitch 速配站</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<div class="compliance-banner" id="banner">
+  <div class="container">
+    <span class="banner-icon">⚠️</span>
+    <span class="banner-text">
+      <strong>重要提示：</strong>本站仅提供软件安装、本地环境配置、故障排查等纯技术指导。
+      境外网络访问、官方账号注册、API 密钥、官方服务费用均需用户自行依法办理。
+    </span>
+    <button class="banner-close" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      CCSwitch 速配站
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="main-nav">
+      <a href="../index.html#features">功能</a>
+      <a href="../index.html#download">下载</a>
+      <a href="../index.html#tutorials">教程</a>
+      <a href="../index.html#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <h1>🛠️ Claude Code 安装 & ccswitch 配置教程</h1>
+    <p>Windows / Mac / Linux 全平台 + 国产 API 一键切换</p>
+  </div>
+</section>
+
+<section>
+  <div class="container content-with-sidebar">
+    <aside class="sidebar">
+      <h3>📑 目录</h3>
+      <ul>
+        <li><a href="#section-1">一、前置环境准备</a></li>
+        <li><a href="#section-2">二、分系统安装</a></li>
+        <li><a href="#section-2-1">Windows 安装</a></li>
+        <li><a href="#section-2-2">macOS 安装</a></li>
+        <li><a href="#section-2-3">Linux 安装</a></li>
+        <li><a href="#section-3">三、VS Code 插件</a></li>
+        <li><a href="#section-4">四、ccswitch 配置国产 API</a></li>
+        <li><a href="#section-5">五、常用指令</a></li>
+      </ul>
+    </aside>
+
+    <article class="main-content">
+
+      <div class="compliance-notice">
+        <strong>📋 本教程须知</strong>
+        本教程仅针对软件本身安装、环境调试、功能配置。使用 Claude Code 需用户自行注册 Anthropic 官方账号、申请合法 API Key。ccswitch 配置的国产 API 也请自行在各平台注册获取 Key。
+      </div>
+
+      <h2 id="section-1">一、前置环境准备</h2>
+      <p>安装 Claude Code 需要以下前置环境：</p>
+      <ul>
+        <li><strong>Node.js</strong> 18.x LTS 或更高版本</li>
+        <li><strong>Git</strong>（可选，但推荐安装）</li>
+        <li><strong>终端 / PowerShell</strong>（管理员权限）</li>
+      </ul>
+      <div class="notice-box">
+        <strong>💡 提示：</strong>如未安装 Node.js，请前往 <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> 下载 LTS 版本，安装时勾选"Add to PATH"。
+      </div>
+      <pre># 验证 Node.js 安装
+node --version
+# 应显示 v18.x.x 或更高
+
+# 验证 npm 安装
+npm --version
+# 应显示 9.x.x 或更高</pre>
+
+      <h2 id="section-2">二、分系统安装</h2>
+
+      <h3 id="section-2-1">Windows 安装（Win 10 / 11）</h3>
+      <div class="notice-box warning">
+        <strong>注意：</strong>建议以管理员身份运行 PowerShell 或 CMD。
+      </div>
+      <ol>
+        <li>打开 PowerShell（按 <code>Win + R</code>，输入 <code>powershell</code>，右键"以管理员身份运行"）</li>
+        <li>执行全局安装命令：</li>
+      </ol>
+      <pre>npm install -g @anthropic-ai/claude-code</pre>
+      <ol start="3">
+        <li>验证安装：</li>
+      </ol>
+      <pre>claude --version</pre>
+      <p>如显示版本号则安装成功。若提示"不是内部或外部命令"，请检查 Node.js 是否已添加到 PATH 环境变量。</p>
+
+      <h3 id="section-2-2">macOS 安装</h3>
+      <p>支持 Intel 和 Apple Silicon（M1/M2/M3/M4）芯片。</p>
+      <ol>
+        <li>打开终端（Terminal.app）</li>
+        <li>确保已安装 Node.js（推荐通过 Homebrew 安装）：</li>
+      </ol>
+      <pre># 安装 Homebrew（如未安装）
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 通过 Homebrew 安装 Node.js
+brew install node
+
+# 验证
+node --version
+npm --version</pre>
+      <ol start="3">
+        <li>安装 Claude Code：</li>
+      </ol>
+      <pre>npm install -g @anthropic-ai/claude-code</pre>
+      <ol start="4">
+        <li>验证：</li>
+      </ol>
+      <pre>claude --version</pre>
+      <div class="notice-box warning">
+        <strong>Apple Silicon 注意：</strong>Node.js 请务必安装 arm64 版本，不要使用 Rosetta 转译版本。
+      </div>
+
+      <h3 id="section-2-3">Linux 安装（Ubuntu / CentOS）</h3>
+      <pre># Ubuntu / Debian
+sudo apt update && sudo apt install nodejs npm git -y
+sudo npm install -g @anthropic-ai/claude-code
+
+# CentOS / RHEL
+sudo yum install nodejs npm git -y
+sudo npm install -g @anthropic-ai/claude-code
+
+# 验证
+claude --version</pre>
+
+      <h2 id="section-3">三、VS Code 插件安装</h2>
+      <ol>
+        <li>打开 VS Code，进入扩展面板（<code>Ctrl+Shift+X</code> / <code>Cmd+Shift+X</code>）</li>
+        <li>搜索 <strong>Claude Code</strong> 并安装</li>
+        <li>安装后按 <code>Ctrl+Shift+P</code>（Mac: <code>Cmd+Shift+P</code>）</li>
+        <li>输入 <code>Claude Code: Start</code> 启动会话</li>
+      </ol>
+
+      <h2 id="section-4">四、ccswitch 配置国产 API ⭐</h2>
+      <p><strong>ccswitch</strong> 是一个命令行工具，可以一键将 Claude Code 的后端模型切换到国产大模型，无需手动设置 <code>ANTHROPIC_BASE_URL</code> 和 <code>ANTHROPIC_API_KEY</code> 环境变量。</p>
+
+      <h3>安装 ccswitch</h3>
+      <p><a href="https://github.com/TomokiMatsubuchi/ccswitch" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="display:inline-flex;">📦 前往 GitHub 下载 ccswitch</a></p>
+      <p style="margin-top:8px;">或通过 npm 安装：</p>
+      <pre># 通过 npm 全局安装
+npm install -g ccswitch
+
+# 验证安装
+cc --version</pre>
+
+      <h3>📸 图文步骤：用 ccswitch 配置 DeepSeek API</h3>
+
+      <div class="step-item">
+        <span class="step-num">1</span>
+        <div>
+          <p>打开下载好的 cc switch</p>
+          <img src="../images/1.png" alt="打开 cc switch" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">2</span>
+        <div>
+          <p>选择上面的 Claude Code 终端版</p>
+          <img src="../images/2.png" alt="选择 Claude Code 终端版" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">3</span>
+        <div>
+          <p>新建一个</p>
+          <img src="../images/3.png" alt="新建配置" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">4</span>
+        <div>
+          <p>选择 DeepSeek</p>
+          <img src="../images/4.png" alt="选择 DeepSeek 模型" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">5</span>
+        <div>
+          <p>去 DeepSeek 官网生成 API</p>
+          <img src="../images/5.png" alt="前往 DeepSeek 官网" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">6</span>
+        <div>
+          <p>打开 DeepSeek 官网</p>
+          <img src="../images/6.png" alt="DeepSeek 官网" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">7</span>
+        <div>
+          <p>选择 API 开放平台</p>
+          <img src="../images/7.png" alt="API 开放平台" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">8</span>
+        <div>
+          <p>随机充几块钱（没钱再充，也不贵）</p>
+          <img src="../images/8.png" alt="充值" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">9</span>
+        <div>
+          <p>点击 API Keys</p>
+          <img src="../images/9.png" alt="API Keys 页面" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">10</span>
+        <div>
+          <p>创建一个 API</p>
+          <img src="../images/10.png" alt="创建 API" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">11</span>
+        <div>
+          <p>复制到 API 填空中，然后划到下面获取模型</p>
+          <img src="../images/11.png" alt="粘贴 API Key 并获取模型" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">12</span>
+        <div>
+          <p>会显示获取两个模型，选上 1M</p>
+          <img src="../images/12.png" alt="选择模型 1M" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">13</span>
+        <div>
+          <p>保存退出（留在后台）</p>
+          <img src="../images/13.png" alt="保存退出" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">14</span>
+        <div>
+          <p>使用，测试能否使用</p>
+          <img src="../images/14.png" alt="测试使用" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">15</span>
+        <div>
+          <p>DeepSeek 正常运行，代表可以使用</p>
+          <img src="../images/15.png" alt="DeepSeek 运行成功" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">16</span>
+        <div>
+          <p>打开终端输入 <code>claude</code></p>
+          <img src="../images/16.png" alt="终端输入 claude" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <span class="step-num">17</span>
+        <div>
+          <p>完成！Enjoy AI 编程 🎉</p>
+          <img src="../images/17.png" alt="完成配置" class="step-img" loading="lazy" />
+        </div>
+      </div>
+
+      <h2 id="section-5">五、常用指令</h2>
+      <pre># 启动交互会话
+claude
+
+# 直接提问（非交互模式）
+claude -p "用 Python 写一个快速排序"
+
+# 代码审查
+/fix     # 修复当前文件问题
+/review  # 审查代码变更
+
+# 代码重构
+/refactor 类名
+
+# 查看会话状态
+/status
+/help</pre>
+
+      <p style="margin-top:40px;text-align:center;color:var(--color-muted-foreground);font-size:0.85rem;">
+        遇到问题？查看 <a href="../index.html#faq">FAQ</a>
+      </p>
+
+    </article>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="../pages/disclaimer.html">免责声明</a>
+      <a href="../pages/disclaimer.html">联系我们</a>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 CCSwitch 速配站
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

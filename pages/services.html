@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="远程协助服务·明码标价 — 4档套餐：基础安装39元、全套部署69元、故障修复29元、月度答疑99元">
+  <title>付费服务 - 码上配</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- ===== 合规横幅 ===== -->
+<div class="compliance-banner" id="banner">
+  <div class="container">
+    <span class="banner-icon">⚠️</span>
+    <span class="banner-text">
+      <strong>重要提示：</strong>本站仅提供软件安装、本地环境配置、故障排查等纯技术指导。
+      境外网络访问、官方账号注册、API 密钥、官方服务费用均需用户自行依法办理。
+    </span>
+    <button class="banner-close" aria-label="关闭">&times;</button>
+  </div>
+</div>
+
+<!-- ===== 导航栏 ===== -->
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      码上配
+    </a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <nav class="main-nav">
+      <a href="../index.html">首页</a>
+      <a href="claude-code.html">Claude Code 教程</a>
+      <a href="codex.html">Codex 教程</a>
+      <a href="environment.html">环境搭建</a>
+      <a href="errors.html">报错合集</a>
+      <a href="services.html" class="active">付费服务</a>
+      <a href="disclaimer.html">免责声明</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== 页面标题 ===== -->
+<section class="page-header">
+  <div class="container">
+    <h1>💎 远程协助服务 · 明码标价</h1>
+    <p>专业工程师远程帮你搞定安装、配置、报错，省心省力</p>
+  </div>
+</section>
+
+<!-- ===== 服务说明 ===== -->
+<section class="section" style="background:var(--color-white);padding-bottom:20px;">
+  <div class="container">
+    <div class="service-scope">
+      <strong>服务方式：</strong>远程桌面协助（向日葵 / ToDesk，用户自愿开启）<br>
+      <strong>服务范围：</strong>软件安装、环境配置、报错修复、基础功能调试<br>
+      <strong style="color:#dc2626;">⚠️ 所有套餐不含：</strong>网络代理、官方账号、API Key、官方付费额度
+    </div>
+
+    <!-- 内嵌详细须知 -->
+    <div class="compliance-notice">
+      <strong>📋 服务须知</strong>
+      本教程 / 服务仅针对软件本身的安装、环境调试、功能配置，不涉及任何网络加速、代理工具。<br>
+      使用 Claude Code、Codex 需用户自行注册官方账号、申请合法 API Key，并遵守对应平台用户协议。<br>
+      软件版权归 Anthropic、OpenAI 所有，本站仅做技术分享，不篡改、不破解、不二次分发软件本体。<br>
+      因网络异常、账号违规、API 额度不足导致的功能失效、账号封禁，相关责任由用户自行承担。
+    </div>
+  </div>
+</section>
+
+<!-- ===== 套餐 ===== -->
+<section class="section" style="padding-top:20px;">
+  <div class="container">
+    <div class="pricing-grid">
+      <!-- 套餐一 -->
+      <div class="pricing-card">
+        <div class="pricing-name">🔧 单款工具基础安装</div>
+        <div class="pricing-price">39 <small>元 / 次</small></div>
+        <div class="pricing-desc">仅需要安装 Claude Code 或 Codex 其中一款</div>
+        <ul>
+          <li>检测系统前置环境（Node/Python/Git）并修复异常</li>
+          <li>远程完成对应工具完整安装、环境变量配置</li>
+          <li>绑定个人合法 API Key，测试基础功能可用</li>
+          <li>讲解基础启动 / 使用方法</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="color:var(--color-primary);">咨询下单</a>
+      </div>
+
+      <!-- 套餐二 -->
+      <div class="pricing-card featured">
+        <span class="pricing-badge">🔥 推荐</span>
+        <div class="pricing-name">🚀 两款工具全套部署</div>
+        <div class="pricing-price">69 <small>元 / 次</small></div>
+        <div class="pricing-desc">同时使用 Claude Code + Codex/Copilot</div>
+        <ul>
+          <li>统一搭建全量前置运行环境</li>
+          <li>两款工具依次完成安装、配置、功能测试</li>
+          <li>整理简易使用文档，标注常用操作</li>
+          <li>赠送基础排错小技巧</li>
+        </ul>
+        <a href="#" class="btn btn-orange">咨询下单</a>
+      </div>
+
+      <!-- 套餐三 -->
+      <div class="pricing-card">
+        <div class="pricing-name">🔍 专项故障修复</div>
+        <div class="pricing-price">29 <small>元 / 次</small></div>
+        <div class="pricing-desc">软件已安装，但出现报错、闪退等问题</div>
+        <ul>
+          <li>远程定位报错原因（环境 / 依赖 / 配置类问题）</li>
+          <li>针对性修复故障，恢复软件正常使用</li>
+          <li>告知问题成因及日常避坑方法</li>
+          <li class="disabled">官方封号、API 额度耗尽、网络问题不在服务范围</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="color:var(--color-primary);">咨询下单</a>
+      </div>
+
+      <!-- 套餐四 -->
+      <div class="pricing-card">
+        <div class="pricing-name">💬 月度答疑陪伴</div>
+        <div class="pricing-price">99 <small>元 / 月</small></div>
+        <div class="pricing-desc">新手用户，长期使用担心频繁出问题</div>
+        <ul>
+          <li>当月不限次数文字 / 简单远程答疑</li>
+          <li>工具版本更新后，同步最新配置方法</li>
+          <li>优先解答安装、使用类问题</li>
+          <li class="disabled">不含批量部署、定制化二次开发需求</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="color:var(--color-primary);">咨询下单</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 客服标准回复模板 ===== -->
+<section class="section" style="background:var(--color-gray-50);">
+  <div class="container">
+    <h2 class="section-title">📋 服务说明</h2>
+    <p class="section-subtitle">以下情况不在我们的服务范围内，敬请理解</p>
+
+    <div class="card-grid card-grid-3">
+      <div class="reply-box">
+        <div class="reply-scene">🌐 用户询问翻墙 / 代理 / 节点</div>
+        <div class="reply-text">
+          抱歉，根据相关规定，我们不提供任何网络代理、翻墙相关工具与资源，
+          网络环境需要您自行依法办理哦。
+        </div>
+      </div>
+      <div class="reply-box">
+        <div class="reply-scene">👤 用户要求代注册账号、代买 API 额度</div>
+        <div class="reply-text">
+          我们仅提供软件技术配置服务，不代注册账号、不代购 API 服务，
+          还请您前往官方平台自行办理哈。
+        </div>
+      </div>
+      <div class="reply-box">
+        <div class="reply-scene">🔓 用户索要破解版、免密钥版本</div>
+        <div class="reply-text">
+          软件版权归官方所有，本站只分享原版软件使用教程，
+          不提供破解、免密钥版本，请理解。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="disclaimer.html">联系我们</a>
+      <a href="disclaimer.html">免责声明</a>
+      <a href="services.html">服务须知</a>
+      <a href="#">版本更新公告</a>
+    </div>
+    <div class="footer-copyright">
+      本站所有内容仅作技术交流，严格遵守网络安全及版权相关法律法规。<br>
+      &copy; 2025 码上配 - AI 编程工具安装服务
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
